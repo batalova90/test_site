@@ -1,36 +1,40 @@
-##Автоматизация поиска сайта через google.##
+## Автоматизация поиска сайта через google.
 
-# Автотест 
+### Автотест 
  - 🧨 Поиск сайта ч.з google;
+ - 🧨 Переход по ссылке;
  - 🧨 Сравнение контактной информации;
 
 ## Инструменты:
 <p align="left"><img src="https://img.icons8.com/fluency/48/000000/python.png" alt="python" width="40" height="40"/>
-<a href="https://icons8.com/icon/38553/selenium">Selenium</a>
+<img src="https://res.cloudinary.com/batalova/image/upload/v1657359741/icons8-selenium-48_j62nbg.png" alt="selenium" width="40" height="40"/>
 </p>
 
-## Как запустить проект:
+### Как запустить проект:
 
-## Установка ##
 
 ### Клонировать репозиторий: ###
 ```shell
-git clone https://github.com/batalova90/recommendations/
+git clone https://github.com/batalova90/test_site/
 ```
 ### Установить зависимости из файла requirements.txt: ###
+Создать виртуальное окружение: 
+```shell
+python3 -m venv venv
+```
+Подключить виртуальное окружение:
+```shell
+source venv/bin/activate
+```
+Установить все зависимости:
 ```shell
 python3 -m pip install --upgrade pip
 ```
 ```shell
 pip install -r requirements.txt
 ```
-### Выполнить миграции: ###
+Запуск теста:
 ```shell
-python3 manage.py migrate
+pytest --disable-pytest-warnings --browser=chrome (firefox)
 ```
-### Запустить проект: ###
-```shell
-python3 manage.py runserver
-```
-
-## Добавлено тестирование с использованием pytest и Selenium
+- 🧨 Фикстуры и тест находятся в директории tests
